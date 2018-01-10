@@ -13,5 +13,5 @@ def won?(board)
 end
 
 def full?(board)
-  board.any? {|position| position_taken?(board, position.to_i)}
+  board.detect {|position| position_taken?(board, position.to_i)}
 end
