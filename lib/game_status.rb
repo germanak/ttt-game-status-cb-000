@@ -13,5 +13,5 @@ def won?(board)
 end
 
 def full?(board)
-  board.all? {|position| board[position] == "X" || board[position] == "O"}
+  board.all? {|position| !position_taken?(board, position)}
 end
